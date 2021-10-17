@@ -3,34 +3,52 @@ Nice to meet you!
 </title>
 
 <style>
-body {background-color: beige;
-	  color: dimgrey;
-	  font-size: 5vw;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {background-color: #2e2e2e;
+	  color: white;
+	  font-size: 3.2vw;
+	  font-family: 'Roboto', sans-serif;
+	  padding-left: 8vw;
+	  padding-right: 8vw;
 	}
 input {
-	  width: 50vw;
-	  height: 5vw;
-	  border-radius: 10px;
+	  width: 60vw;
+	  height: 8vw;
+	  border-radius: 15px;
 	  background-color: transparent;
-	  font-size: 2.3vw;
+	  font-size: 4.2vw;
 	  text-align: center;
+	  border-style:solid;
+	  color: whitesmoke;
 	}
 .vertical{
-		padding: 18vh;
-	}
-button {
-	  width: 30vw;
-	  height: 5vw;
-	  font-size: 3vw;
-	  border-radius: 15px;
-	  border: none;
-	}
-.vertical1{
-		padding: 0.5vh;
-	}
-.vertical2{
 		padding: 2vh;
 	}
+button {
+	  width: 50vw;
+	  height: 7.5vw;
+	  font-size: 4.2vw;
+	  border-radius: 15px;
+	  border: none;
+	  background-color: white;	
+	  color: #2e2e2e;
+	}
+.vertical1{
+		padding: 2vh;
+	}
+.vertical2{
+		padding: 1vh;
+	}
+.vertical3{
+		padding: 2.5vh;
+	}
+p	{
+		font-size: 1.3vw;
+	}
+.vertical4{
+		padding: 1vh;
+	}
+	
 	
 
 </style>
@@ -39,32 +57,56 @@ button {
 	<center>
 	<body>
 		<br>
-		Christopher Nakayama
 		<br>
+		Hey, it's Chris.
+		<br>
+		<div class = "vertical4">
+		</div>
+		<p>
+		I enjoyed our conversation and am curious to see how you'd answer these questions. If you're right I'll let you know and you'll get a gift. There are multiple answer to each, so just go with your gut.  Follow the formatting exactly as only answers in that format will work.
+		</p>
 		<div class = "vertical">
 		</div>
-		This is an example question.  What's your answer?
-		<br>
+		What's your name?
 		<div class = "vertical2">
 		</div>
 		<input id = "name" placeholder="Your name">
+		<div class = "vertical3">
+		</div>
+		What activity can one never become bored doing? 
+		<br>
 		<div class = "vertical2">
 		</div>
-		<input id = "user" placeholder="Your answer">
+		<input id = "user" placeholder="Soul search">
+		<div class = "vertical3">
+		</div>
+		What food does a cool person enjoy most?
+		<br>
+		<div class = "vertical2">
+		</div>
+		<input id = "user1" placeholder="Ancient tea">
+		<div class = "vertical3">
+		</div>
+		If you were asked to read a dictionary, what day/time would you read it?
+		<br>
+		<div class = "vertical2">
+		</div>
+		<input id = "user2" placeholder="Tuesday @ 3am">
 		<br>
 		<div class = "vertical1">
 		</div>
 		<button onclick="sendText()">
-		This is my answer.
+		Done.
 		</button>
-		<h1>
-</h1>
 
 <script>
 	function sendText(){
-	var userInput = document.getElementById('user').value;
 	var userName = document.getElementById('name').value;
-	window.open('sms:+1310909-3192&body=' + "Hi!  It's " + userName + "!  Here's what I think.  " + userInput);
+	var time = document.getElementById('user2').value;
+	var food = document.getElementById('user1').value;
+	var activity = document.getElementById('user').value;
+
+	window.open('sms:+1310909-3192&body=' + "Hey!  It's " + userName + "!  We should go get " + food + " " + time + " and after go " + activity + " together! This is me asking you out on a date btw :)");
 	}
 </script>
 		
